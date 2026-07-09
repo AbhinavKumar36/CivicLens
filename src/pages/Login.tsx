@@ -76,7 +76,7 @@ export function Login() {
       >
         <div className="text-center space-y-4">
           <div className="w-16 h-16 rounded-3xl overflow-hidden mx-auto shadow-[0_0_30px_rgba(192,193,255,0.2)]">
-            <img src="/logo.jpeg" alt="CivicLens Logo" className="w-full h-full object-cover" />
+            <img src={`${import.meta.env.BASE_URL}logo.jpeg`} alt="CivicLens Logo" className="w-full h-full object-cover" />
           </div>
           <Headline level={1} className="text-foreground">Select Your Role</Headline>
           <BodyText className="text-on-surface-variant max-w-lg mx-auto">

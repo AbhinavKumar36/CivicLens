@@ -54,7 +54,7 @@ export function LandingPage() {
         {/* Header */}
         <header className="w-full h-20 px-8 flex justify-between items-center border-b border-[#dae2fd]/5 relative z-10 shrink-0 bg-[#0b1326]/50 backdrop-blur-md">
           <div className="flex items-center gap-3">
-            <img src="/logo.jpeg" alt="CivicLens Logo" className="w-10 h-10 rounded-xl object-cover" style={{ boxShadow: '0px 0px 40px rgba(192,193,255,0.4)' }} />
+            <img src={`${import.meta.env.BASE_URL}logo.jpeg`} alt="CivicLens Logo" className="w-10 h-10 rounded-xl object-cover" style={{ boxShadow: '0px 0px 40px rgba(192,193,255,0.4)' }} />
             <div>
               <h1 className="font-headline-md text-lg font-extrabold tracking-tight bg-gradient-to-r from-[#c0c1ff] to-[#ddb7ff] bg-clip-text text-transparent">CivicLens AI</h1>
               <p className="text-[9px] text-[#908fa0] font-label-sm uppercase tracking-wider">City Operating System</p>
@@ -203,7 +203,7 @@ export function LandingPage() {
             </div>
             <div className="relative z-10">
                 <div className="mb-6 flex flex-col sm:flex-row items-center sm:items-start gap-6 text-center sm:text-left">
-                    <img src="/abhinav.png" alt="Abhinav Kumar" className="w-24 h-24 rounded-full object-cover border-2 border-[#c0c1ff]/50 shadow-[0_0_15px_rgba(192,193,255,0.3)] object-top" />
+                    <img src={`${import.meta.env.BASE_URL}abhinav.png`} alt="Abhinav Kumar" className="w-24 h-24 rounded-full object-cover border-2 border-[#c0c1ff]/50 shadow-[0_0_15px_rgba(192,193,255,0.3)] object-top" />
                     <div className="mt-2 sm:mt-0">
                         <span className="text-[10px] text-[#c0c1ff] uppercase tracking-widest font-bold">Lead Architect & Full-Stack Developer</span>
                         <h3 className="font-display-lg text-2xl mt-1 text-[#dae2fd] font-bold">Abhinav Kumar</h3>
