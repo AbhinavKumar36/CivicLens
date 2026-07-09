@@ -55,7 +55,7 @@ export default function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <AuthProvider>
-        <BrowserRouter>
+        <BrowserRouter basename={import.meta.env.BASE_URL}>
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               {/* Public Routes */}
