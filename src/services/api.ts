@@ -1,4 +1,5 @@
 import axios from "axios";
+import { MOCK_REPORTS } from "../utils/mock-data";
 
 // Create Axios instance pointing to our new local Express server
 const apiClient = axios.create({
@@ -11,8 +12,13 @@ const apiClient = axios.create({
 export const api = {
   // COMPLAINTS (REPORTS)
   getComplaints: async () => {
-    const response = await apiClient.get("/complaints");
-    return response.data;
+    try {
+      const response = await apiClient.get("/complaints");
+      return response.data;
+    } catch (error) {
+      console.warn("Backend unavailable, falling back to mock reports");
+      return MOCK_REPORTS;
+    }
   },
   getComplaint: async (id: number) => {
     const response = await apiClient.get(`/complaints/${id}`);
@@ -34,14 +40,22 @@ export const api = {
   
   // WORKERS
   getWorkers: async () => {
-    const response = await apiClient.get("/workers");
-    return response.data;
+    try {
+      const response = await apiClient.get("/workers");
+      return response.data;
+    } catch (error) {
+      return [];
+    }
   },
   
   // EMERGENCIES
   getEmergencies: async () => {
-    const response = await apiClient.get("/emergencies");
-    return response.data;
+    try {
+      const response = await apiClient.get("/emergencies");
+      return response.data;
+    } catch (error) {
+      return [];
+    }
   },
   createEmergency: async (data: any) => {
     const response = await apiClient.post("/emergencies", data);
@@ -50,13 +64,21 @@ export const api = {
   
   // DEPARTMENTS
   getDepartments: async () => {
-    const response = await apiClient.get("/departments");
-    return response.data;
+    try {
+      const response = await apiClient.get("/departments");
+      return response.data;
+    } catch (error) {
+      return [];
+    }
   },
   
   // USERS
   getUsers: async () => {
-    const response = await apiClient.get("/users");
-    return response.data;
+    try {
+      const response = await apiClient.get("/users");
+      return response.data;
+    } catch (error) {
+      return [];
+    }
   }
 };
