@@ -17,14 +17,7 @@ export const api = {
       return response.data;
     } catch (error) {
       console.warn("Backend unavailable, falling back to mock reports");
-      return MOCK_REPORTS.map(r => ({
-        ...r,
-        latitude: r.location_lat,
-        longitude: r.location_lng,
-        summary: r.title,
-        department: "Public Works",
-        severity: r.id % 2 === 0 ? "HIGH" : "CRITICAL"
-      }));
+      return MOCK_REPORTS;
     }
   },
   getComplaint: async (id: number) => {

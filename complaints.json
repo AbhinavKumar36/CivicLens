@@ -1,12 +1,4 @@
-export const MOCK_USER = {
-  id: 1,
-  name: "Priya Sharma",
-  role: "citizen",
-  avatar_url: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=150&q=80",
-  tier: "Standard Tier"
-};
-
-export const MOCK_REPORTS = [
+[
   {
     "id": 1,
     "category": "safety",
@@ -367,17 +359,4 @@ export const MOCK_REPORTS = [
     "worker_id": 4,
     "created_at": "2026-07-02T05:16:16.384Z"
   }
-];
-
-export const MOCK_METRICS = [
-  { id: 1, type: "weather", value: "72°F", label: "Weather", icon: "cloud" },
-  { id: 2, type: "aqi", value: "42", label: "AQI", icon: "air" },
-  { id: 3, type: "transit", value: "98%", label: "Transit", icon: "directions_transit" },
-  { id: 4, type: "traffic", value: "Light", label: "Traffic", icon: "traffic" }
-];
-
-export const MOCK_RECOMMENDATIONS = [
-  { id: 1, title: "Parking Permit Expiring", type: "alert", icon: "auto_awesome", color: "primary", description: "Your District 4 permit expires in 3 days. Renew now to avoid auto-citations.", action: "Renew Instantly" },
-  { id: 2, title: "Community Jazz Night", type: "event", icon: "event", color: "primary", description: "Starts in 2 hours • Central Plaza" },
-  { id: 3, title: "Service Reminder", type: "reminder", icon: "water_drop", color: "secondary", description: "Water maintenance tomorrow, 9AM" }
-];
+]
